@@ -1,54 +1,52 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Briefcase, GraduationCap, Heart, Map } from "lucide-react";
+import { Heart, Building, GraduationCap, PartyPopper, Plane } from "lucide-react";
 
 const services = [
   {
-    icon: <Users />,
-    title: "Семейные издания",
-    description: "Сохраните историю вашей семьи в красивом глянцевом журнале с профессиональными фотографиями и рассказами о важных моментах."
+    icon: <Heart className="h-12 w-12 text-primary" />,
+    title: "Семейные журналы",
+    description: "Сохраните ваши самые важные моменты и семейную историю в элегантном глянцевом журнале, который станет бесценной реликвией для будущих поколений."
   },
   {
-    icon: <Briefcase />,
-    title: "Корпоративные журналы",
-    description: "Создайте профессиональное издание о вашем бизнесе для клиентов, партнеров и сотрудников с историей успеха и достижениями."
+    icon: <Building className="h-12 w-12 text-primary" />,
+    title: "Корпоративные издания",
+    description: "Представьте достижения вашей компании, истории успеха и корпоративную культуру в профессиональном формате для клиентов и партнеров."
   },
   {
-    icon: <GraduationCap />,
-    title: "Школьные выпуски",
-    description: "Запечатлейте школьные годы в стильном альманахе с фотографиями класса, интервью с учителями и памятными моментами."
+    icon: <GraduationCap className="h-12 w-12 text-primary" />,
+    title: "Школьные альбомы",
+    description: "Создайте уникальные выпускные альбомы и журналы класса, которые сохранят воспоминания о школьных годах в современном глянцевом формате."
   },
   {
-    icon: <Heart />,
+    icon: <PartyPopper className="h-12 w-12 text-primary" />,
     title: "Свадебные истории",
-    description: "Превратите фотографии и воспоминания с вашей свадьбы в роскошный журнал, который сохранит эмоции этого особенного дня."
+    description: "Превратите фотографии и истории вашего особенного дня в роскошный журнал, который будет радовать вас долгие годы."
   },
   {
-    icon: <Map />,
-    title: "Журналы о путешествиях",
-    description: "Документируйте ваши приключения в персональном travel-журнале с фотографиями, маршрутами и впечатлениями."
+    icon: <Plane className="h-12 w-12 text-primary" />,
+    title: "Журналы путешествий",
+    description: "Оформите ваши приключения в виде персонализированного тревел-журнала с картами, фотографиями и воспоминаниями."
   }
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-secondary/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-primary">Наши услуги</h2>
-          <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
-            Мы создаем персонализированные глянцевые журналы для самых важных моментов вашей жизни
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Наши услуги</h2>
+          <p className="text-lg text-muted-foreground">
+            Мы создаем персонализированные глянцевые журналы для различных 
+            случаев и клиентов, сохраняя ваши истории в премиальном качестве.
           </p>
         </div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="p-3 bg-primary/10 rounded-full w-12 h-12 flex items-center justify-center text-primary mb-4">
-                  {service.icon}
-                </div>
-                <CardTitle>{service.title}</CardTitle>
+            <Card key={index} className="service-card border-none shadow-md hover:shadow-xl">
+              <CardHeader className="pb-2">
+                <div className="mb-4">{service.icon}</div>
+                <CardTitle className="text-xl">{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base">{service.description}</CardDescription>

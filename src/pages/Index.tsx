@@ -1,6 +1,4 @@
-
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import Hero from "@/components/Hero";
 import ServicesSection from "@/components/ServicesSection";
 import PortfolioSection from "@/components/PortfolioSection";
@@ -13,7 +11,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Навигационная панель */}
       <nav className="bg-white shadow-sm py-4 sticky top-0 z-50">
-        <div className="container mx-auto flex items-center justify-between">
+        <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img src="/logo-b.svg" alt="Автограф" className="h-10 w-auto" />
             <span className="text-2xl font-bold text-primary">Автограф</span>
